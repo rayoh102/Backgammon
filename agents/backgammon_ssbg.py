@@ -1,6 +1,6 @@
 '''
-Name(s):
-UW netid(s):
+Name(s): Ray Oh
+UW netid(s): rayoh101
 '''
 
 from game_engine import genmoves
@@ -9,25 +9,27 @@ class BackgammonPlayer:
     def __init__(self):
         self.GenMoveInstance = genmoves.GenMoves()
         # feel free to create more instance variables as needed.
+        self.maxPly = 1
+        self.staticEvalFunction = None
 
     # TODO: return a string containing your UW NETID(s)
     # For students in partnership: UWNETID + " " + UWNETID
     def nickname(self):
         # TODO: return a string representation of your UW netid(s)
-        return ""
+        return "rayoh101"
 
     # Given a ply, it sets a maximum for how far an agent
     # should go down in the search tree. Count the chance nodes
     # as a ply too!
     def setMaxPly(self, maxply=2):
         # TODO: set the max ply
-        pass
+        self.maxPly = maxply
 
     # If not None, it update the internal static evaluation
     # function to be func
     def useSpecialStaticEval(self, func):
         # TODO: update your staticEval function appropriately
-        pass
+        self.staticEvalFunction = func
 
     # Given a state and a roll of dice, it returns the best move for
     # the state.whose_move
